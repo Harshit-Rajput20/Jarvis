@@ -75,16 +75,21 @@ def ReplyBrain(question , chat_log = None):
     return Reply
 
 
-def answers():
+def answers(): 
 
-        while True:
-            input_text = listen().lower() 
-            print(input_text)  
-             
-            reply = ReplyBrain(input_text)
-            print(reply)
-            speak(reply)
-            # break
-            
-            
-# answers()            
+    while True:
+        input_text = listen().lower() 
+        print(input_text)  
+                
+        reply = ReplyBrain(input_text)
+        print(reply)
+        speak(reply)
+        # break
+        
+# answers()
+                
+       
+       
+       
+       
+ 

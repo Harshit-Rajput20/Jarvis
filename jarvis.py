@@ -15,6 +15,7 @@ from selenium.webdriver.chrome.options import Options
 from bardapi import BardCookies
 import datetime
 import cv2
+import keyboard
 
 from Social_Media.youtube import youtube
 from Social_Media.search import search
@@ -65,13 +66,41 @@ def ReplyBrain(question , chat_log = None):
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def mainExe():
-    
-    speak("I am Friday")
+     
+    speak("I am Alisa")
+   
     
     while True:
-        query = listen().lower()
         
+        query = listen().lower()
+
+        # query = input("enter the command")        
         if "hello" in query:
             speak("Hi! I am Friday")
         
@@ -92,6 +121,8 @@ def mainExe():
              
             youtube()    
             
+        
+            
             
             
         elif "search" in query:
@@ -107,6 +138,17 @@ def mainExe():
             speak("opening terminal")
             os.system('gnome-terminal')
             continue
+        
+        elif "calendar" in query:
+            speak("opening calendar")
+            os.system('gnome-calendar')
+            continue
+        
+        elif "calculator" in query:
+            speak("opening calculator")
+            os.system('gnome-calculator')
+            continue
+
         elif "libra office" in query:
             speak("opening libra office")
             os.system('libreoffice --writer')  
@@ -116,6 +158,15 @@ def mainExe():
             speak("opening firefox")
             os.system('firefox')
             continue
+            
+        elif "settings" in query:
+             speak("opening settings")
+             os.system('gnome-control-center')
+             continue
+        elif "system monitor" in query:
+             speak("opening system monitor")
+             os.system('gnome-system-monitor')
+             continue
         
         elif "camera" in query:
             speak("opening the camera")
@@ -132,6 +183,11 @@ def mainExe():
         elif "are you here" in query:
             speak("yes sir")
             
+        elif "text editor" in query:
+            speak("opening text editor")
+            os.system('gedit')
+            continue
+            
         elif "chat gpt" in query:
             webbrowser.open("https://chat.openai.com/?model=text-davinci-002-render-sha")
             
@@ -139,6 +195,9 @@ def mainExe():
         elif  "shutdown" in query or "shut down" in query:
             speak("shutting down the system ,Good by sir")
             os.system("sudo poweroff")
+        elif "backlit" in query or "back lit" in query or "back light" in query or "backlight" in query:
+             pyautogui.hotkey('fn', 'f4')
+             
         elif "bye" in query:
             speak("Bye sir have a nice day")
             exit
@@ -153,8 +212,8 @@ def mainExe():
             
             
             
-            
-            
+ 
+
                 
             
    

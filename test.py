@@ -52,34 +52,34 @@ print(f"X: {x}, Y: {y}")
 # pyautogui.press('enter')
 
 
-speak('opening youtube')
-webbrowser.open("https://www.youtube.com/")
-time.sleep(5)
-pyautogui.click(x=905, y=177)
-while True:
-    speak("What are you looking for?")
-    video_name = listen().lower()
-    pyautogui.typewrite(video_name)
-    pyautogui.press('enter')    
-    if video_name:
-        break
-while True:
-    speak("Which video do you want to play?")
-    vedio = listen().lower()
+# speak('opening youtube')
+# webbrowser.open("https://www.youtube.com/")
+# time.sleep(5)
+# pyautogui.click(x=905, y=177)
+# while True:
+#     speak("What are you looking for?")
+#     video_name = listen().lower()
+#     pyautogui.typewrite(video_name)
+#     pyautogui.press('enter')    
+#     if video_name:
+#         break
+# while True:
+#     speak("Which video do you want to play?")
+#     vedio = listen().lower()
     
-    if vedio in ['first', 'second', 'third', 'fourth']:
-        break
+#     if vedio in ['first', 'second', 'third', 'fourth']:
+#         break
     
-    speak("I'm sorry, please specify 'first', 'second', 'third', or 'fourth' for the video.")
+#     speak("I'm sorry, please specify 'first', 'second', 'third', or 'fourth' for the video.")
     
-if vedio == 'first':
-    speak("Playing first video")
-    pyautogui.click(x=801, y=340)
-    pyautogui.press('enter')
-elif vedio == 'second':
-    speak("Playing second video")
-    pyautogui.click(x=766, y=562)
-    pyautogui.press('enter')
+# if vedio == 'first':
+#     speak("Playing first video")
+#     pyautogui.click(x=801, y=340)
+#     pyautogui.press('enter')
+# elif vedio == 'second':
+#     speak("Playing second video")
+#     pyautogui.click(x=766, y=562)
+#     pyautogui.press('enter')
 # elif vedio == 'third':
 #     speak("Playing third video")
 #     pyautogui.click(x=741, y=834)
@@ -89,6 +89,9 @@ elif vedio == 'second':
 #     pyautogui.click(x=764, y=1026)
 #     pyautogui.press('enter')
 
+
+
+# pyautogui.press('fn', 'f4')
     
     
     
